@@ -37,11 +37,8 @@ window.addEventListener("load", async function (event) {
         await sleep(30000);
         console.log("dbg: 30s sleep passed");
 
-        const todayToExpand = document.querySelector('div.MarketSide__MarketCompetitionSideContainer-sc-gkcapd-4.gNMqC.today:not([class$="expanded"])').querySelector("div");
-        const earlyToExpand = document.querySelector('div.MarketSide__MarketCompetitionSideContainer-sc-gkcapd-4.gNMqC.early:not([class$="expanded"])').querySelector("div");
-
-        console.log("dbg: todayToExpand: " + todayToExpand);
-        console.log("dbg: earlyToExpand: " + earlyToExpand);
+        const todayToExpand = document.querySelector('div.MarketSide__MarketCompetitionSideContainer-sc-gkcapd-4.gNMqC.today:not([class$="expanded"]) div'); 
+        const earlyToExpand = document.querySelector('div.MarketSide__MarketCompetitionSideContainer-sc-gkcapd-4.gNMqC.early:not([class$="expanded"]) div');
 
         if (todayToExpand !== null) {
             todayToExpand.dispatchEvent(clickEvent);
