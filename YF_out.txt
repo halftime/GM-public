@@ -1,0 +1,59 @@
+Enterprise Value 9.94M YF key stats current:46:13
+Trailing P/E N/A YF key stats current:46:13
+Forward P/E N/A YF key stats current:46:13
+PEG Ratio (5 yr expected) N/A YF key stats current:46:13
+Price/Sales (ttm)N/A YF key stats current:46:13
+Price/Book (mrq)5.82 YF key stats current:46:13
+Enterprise Value/Revenue N/A YF key stats current:46:13
+Enterprise Value/EBITDA -0.50 YF key stats current:46:13
+Beta (5Y Monthly) 0.64 YF key stats current:46:13
+52-Week Change 3-12.47% YF key stats current:46:13
+S&P500 52-Week Change 335.91% YF key stats current:46:13
+52 Week High 32.0600 YF key stats current:46:13
+52 Week Low 30.1410 YF key stats current:46:13
+50-Day Moving Average 30.3433 YF key stats current:46:13
+200-Day Moving Average 30.5898 YF key stats current:46:13
+Avg Vol (3 month) 327.56M YF key stats current:46:13
+Avg Vol (10 day) 386.08M YF key stats current:46:13
+Shares Outstanding 514.91M YF key stats current:46:13
+Implied Shares Outstanding 614.91M YF key stats current:46:13
+Float 86.67M YF key stats current:46:13
+% Held by Insiders 11.17% YF key stats current:46:13
+% Held by Institutions 121.96% YF key stats current:46:13
+Shares Short (Oct 15, 2024) 4113.06k YF key stats current:46:13
+Short Ratio (Oct 15, 2024) 40.31 YF key stats current:46:13
+Short % of Float (Oct 15, 2024) 40.83% YF key stats current:46:13
+Short % of Shares Outstanding (Oct 15, 2024) 40.82% YF key stats current:46:13
+Shares Short (prior month Sep 13, 2024) 4203.29k YF key stats current:46:13
+Forward Annual Dividend Rate 4N/A YF key stats current:46:13
+Forward Annual Dividend Yield 4N/A YF key stats current:46:13
+Trailing Annual Dividend Rate 30.00 YF key stats current:46:13
+Trailing Annual Dividend Yield 30.00% YF key stats current:46:13
+5 Year Average Dividend Yield 4N/A YF key stats current:46:13
+Payout Ratio 40.00% YF key stats current:46:13
+Dividend Date 3N/A YF key stats current:46:13
+Ex-Dividend Date 4N/A YF key stats current:46:13
+Last Split Factor 21:12 YF key stats current:46:13
+Last Split Date 3Mar 31, 2023 YF key stats current:46:13
+Fiscal Year Ends Dec 31, 2023 YF key stats current:46:13
+Most Recent Quarter (mrq)Jun 30, 2024 YF key stats current:46:13
+Profit Margin 0.00% YF key stats current:46:13
+Operating Margin (ttm)-1,075.62% YF key stats current:46:13
+Return on Assets (ttm)-131.94% YF key stats current:46:13
+Return on Equity (ttm)-427.89% YF key stats current:46:13
+Revenue (ttm)1.44M YF key stats current:46:13
+Revenue Per Share (ttm)0.27 YF key stats current:46:13
+Quarterly Revenue Growth (yoy)-62.90% YF key stats current:46:13
+Gross Profit (ttm)N/A YF key stats current:46:13
+EBITDA N/A YF key stats current:46:13
+Net Income Avi to Common (ttm)-11.28M YF key stats current:46:13
+Diluted EPS (ttm)-2.7000 YF key stats current:46:13
+Quarterly Earnings Growth (yoy)N/A YF key stats current:46:13
+Total Cash (mrq)1.04M YF key stats current:46:13
+Total Cash Per Share (mrq)0.12 YF key stats current:46:13
+Total Debt (mrq)454.46k YF key stats current:46:13
+Total Debt/Equity (mrq)30.72% YF key stats current:46:13
+Current Ratio (mrq)1.88 YF key stats current:46:13
+Book Value Per Share (mrq)0.22 YF key stats current:46:13
+Operating Cash Flow (ttm)-9.78M YF key stats current:46:13
+Levered Free Cash Flow (ttm)-5.39M
