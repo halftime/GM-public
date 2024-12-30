@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name     sportmarket-viewall
-// @version  1
+// @version  3
 // @grant    none
 // @namespace    https://pro.sportmarket.com
 // @include https://pro.sportmarket.com/alpha/trade*
@@ -36,45 +36,42 @@ document.addEventListener('keydown', async function (event) {
         if (document.readyState === "complete") {
             console.log("dbg: DOM loaded and parsed");
 
-            const elements = document.querySelectorAll('div.styles_timeGroupHeader__9wBTz span span.styles_header__PmmkP');
+            const eventBoxes = document.querySelectorAll('div.styles_timeGroupHeader__9wBTz span span.styles_header__PmmkP');
 
-            if (elements.length != 3) {
-                console.log("dbg: elements.length != 3, exiting...");
-                console.log("dbg: elements: " + elements);
+            if (eventBoxes.length != 3) {
+                console.log("dbg: error box elements.length <> 3: " + eventBoxes);
                 return;
             }
 
-            // elements[0] is "In running" / live
-            const todayToExpand = elements[1];
-            const earlyToExpand = elements[2];
+            const liveToExpand = eventBoxes[0];
+            const todayToExpand = eventBoxes[1];
+            const earlyToExpand = eventBoxes[2];
 
-            const todayExpandedBox = document.querySelector('div.styles_listContainer__k_igi.styles_today__zcl7T');
-            const earlyExpandedBox = document.querySelector('div.styles_listContainer__k_igi.styles_early__lbebL');
+            let liveExpandedBox = document.querySelector('div.styles_listContainer__k_igi.styles_in-running__H2KZf');
+            let todayExpandedBox = document.querySelector('div.styles_listContainer__k_igi.styles_today__zcl7T');
+            let earlyExpandedBox = document.querySelector('div.styles_listContainer__k_igi.styles_early__lbebL');
 
-            console.log("dbg: todayToExpand: " + todayToExpand);
-            console.log("dbg: earlyToExpand: " + earlyToExpand);
+            if (liveExpandedBox == null) { liveToExpand.dispatchEvent(clickEvent); }
+            if (todayExpandedBox == null) { todayToExpand.dispatchEvent(clickEvent); }
+            if (earlyExpandedBox == null) { earlyToExpand.dispatchEvent(clickEvent); }
 
-            if (todayExpandedBox == null) {
-                todayToExpand.dispatchEvent(clickEvent);
+            await sleep(3000);
+
+            liveExpandedBox = document.querySelector('div.styles_listContainer__k_igi.styles_in-running__H2KZf');
+            todayExpandedBox = document.querySelector('div.styles_listContainer__k_igi.styles_today__zcl7T');
+            earlyExpandedBox = document.querySelector('div.styles_listContainer__k_igi.styles_early__lbebL');
+
+            const toExpBoxes = [liveExpandedBox, todayExpandedBox, earlyExpandedBox];
+
+            for (let i = 0; i < toExpBoxes.length; i++) {
+                const box = toExpBoxes[i];
+                if (box == null) {
+                    console.log("dbg: error box is null: " + i);
+                    return; // continue;
+                }
+                const BoxEvents = box.querySelectorAll('li.styles_competitionItem__sRPO1:not(.styles_watched__oGXCB)');
+                await ClickAllDelayed(BoxEvents, 100);
             }
-
-            await sleep(2000);
-
-            const todayEvents = document.querySelectorAll('div.styles_listContainer__k_igi.styles_today__zcl7T ul.styles_competitionList__sLeBy li.styles_competitionItem__sRPO1:not(.styles_watched__oGXCB)');
-
-            console.log("dbg: todayEvents: " + todayEvents);
-            await ClickAllDelayed(todayEvents, 100);
-
-            await sleep(2000);
-
-            if (earlyExpandedBox == null) {
-                earlyToExpand.dispatchEvent(clickEvent);
-            }
-
-            await sleep(2000);
-            const earlyEvents = document.querySelectorAll('div.styles_listContainer__k_igi.styles_early__lbebL ul.styles_competitionList__sLeBy li.styles_competitionItem__sRPO1:not(.styles_watched__oGXCB)');
-            console.log("dbg: earlyEvents: " + earlyEvents);
-            await ClickAllDelayed(earlyEvents, 100);
         }
     }
 });
