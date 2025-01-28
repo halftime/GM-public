@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name     sportmarket-viewall
-// @version  4
+// @version  5
 // @grant    none
-// @namespace    https://pro.sportmarket.com
-// @include https://pro.sportmarket.com/v/trade/football/full-time*
+// @match https://pro.sportmarket.com/v/trade/football/full-time*
+// @match https://edge.madmarket.io/trade/football/full-time*
 // @run-at       document-end
-// @description sportmarket, darkmode on
+// @description sportmarket alpha, darkmode on
 // ==/UserScript==
 
 async function sleep(ms) {
@@ -34,6 +34,8 @@ async function ClickAllDelayed(elementsArray, delayMs = 200) {
 document.addEventListener('keydown', async function (event) {
     if (event.key === 'F1') {
         if (document.readyState === "complete") {
+            console.log("dbg: DOM loaded and parsed");
+
             const eventBoxes = document.querySelectorAll('div.styles_timeGroupHeader__9wBTz span span.styles_header__PmmkP');
 
             if (eventBoxes.length != 3) {
@@ -53,6 +55,8 @@ document.addEventListener('keydown', async function (event) {
             if (todayExpandedBox == null) { todayToExpand.dispatchEvent(clickEvent); }
             if (earlyExpandedBox == null) { earlyToExpand.dispatchEvent(clickEvent); }
 
+            await sleep(500);
+
             liveExpandedBox = document.querySelector('div.styles_listContainer__k_igi.styles_in-running__H2KZf');
             todayExpandedBox = document.querySelector('div.styles_listContainer__k_igi.styles_today__zcl7T');
             earlyExpandedBox = document.querySelector('div.styles_listContainer__k_igi.styles_early__lbebL');
@@ -66,7 +70,7 @@ document.addEventListener('keydown', async function (event) {
                     return; // continue;
                 }
                 const BoxEvents = box.querySelectorAll('li.styles_competitionItem__sRPO1:not(.styles_watched__oGXCB)');
-                await ClickAllDelayed(BoxEvents, 50);
+                await ClickAllDelayed(BoxEvents, 20);
             }
         }
     }
